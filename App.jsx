@@ -1,20 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Creo que ya está enlazao a GITHUB</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.tituloprincipal}>Inicio</Text>
+      <StatusBar style="ligth" />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'orange',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "steelblue",
   },
+  tituloprincipal:{
+    padding:10-5,
+    fontSize:20,
+    fontWeight:blur,
+  }
 });
