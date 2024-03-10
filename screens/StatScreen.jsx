@@ -1,12 +1,12 @@
 import React from 'react';
 import { TouchableOpacity ,StyleSheet, Text,  View} from 'react-native';
 
-const HomeScreen = () => {
+const StatScreen = () => {
     return (
         <View>
-          <Text>Pantalla Principal</Text>
+          <Text>Pantalla de Estadisticas</Text>
         </View>
       );
 }
 
-export default HomeScreen
+export default StatScreen

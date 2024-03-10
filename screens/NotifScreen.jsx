@@ -1,12 +1,12 @@
 import React from 'react';
 import { TouchableOpacity ,StyleSheet, Text,  View} from 'react-native';
 
-const HomeScreen = () => {
+const NotifScreen = () => {
     return (
         <View>
-          <Text>Pantalla Principal</Text>
+          <Text>Pantalla de Notificaciones</Text>
         </View>
       );
 }
 
-export default HomeScreen
+export default NotifScreen

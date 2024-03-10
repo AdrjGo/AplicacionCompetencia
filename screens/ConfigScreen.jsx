@@ -1,12 +1,12 @@
 import React from 'react';
 import { TouchableOpacity ,StyleSheet, Text,  View} from 'react-native';
 
-const HomeScreen = () => {
+const ConfigScreen = () => {
     return (
         <View>
-          <Text>Pantalla Principal</Text>
+          <Text>Pantalla de Configuraciones</Text>
         </View>
       );
 }
 
-export default HomeScreen
+export default ConfigScreen

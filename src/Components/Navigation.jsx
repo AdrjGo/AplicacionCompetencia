@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity ,StyleSheet, Text,  View} from 'react-native';
 
-const HomeScreen = () => {
+const Navigation = () => {
     return (
         <View>
           <Text>Pantalla Principal</Text>
@@ -9,4 +9,4 @@ const HomeScreen = () => {
       );
 }
 
-export default HomeScreen
+export default Navigation
