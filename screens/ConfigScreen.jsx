@@ -1,27 +1,19 @@
-import React, {Component} from 'react';
-import { View, Button, StyleSheet, Text, TouchableHighlight } from 'react-native';
+import * as React from "react";
+import { SafeAreaView, StyleSheet } from "react-native";
+import Buttons from '../src/components/Buttons'
 
-const ConfigScreen = () => {
+const ConfigScreen = () =>  {
   return (
-      <View style = {styles.container} >
-        <Button title='Divisa' color="#181818"/>
-        <Button title='Contraseña' color="#181818"/>
-        <Button title='Tema de la aplicación' color="#181818"/>
-        <Button title='Modo oscuro' color="#181818"/>
-        <Button title='Copia de seguridad' color="#181818"/>
-        <Button title='Información' color="#181818"/>
-        <Button title='Dudas o sugerencias' color="#181818"/>
-        <Button title='Política de privacidad' color="#181818"/>
-      </View>
+    <SafeAreaView style={{ backgroundColor: "#1a1a1a", flex: 1 }}>
+      <Buttons text="Divisa"  />
+      <Buttons text="Contraseña"/>
+      <Buttons text="Tema de la aplicación"/>
+      <Buttons text="Modo oscuro"/>
+      <Buttons text="Copia de seguridad"/>
+      <Buttons text="Información"/>
+      <Buttons text="Dudas o sugerencias"/>
+      <Buttons text="Política de privacidad"/>
+    </SafeAreaView>
   );
 }
-
-export default ConfigScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor:'#181818'
-  },
-});
+export default ConfigScreen

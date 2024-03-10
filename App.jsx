@@ -6,14 +6,6 @@ import Navigation from './src/components/Navigation';
 
 export default function App() {
   return (
-    <Navigation style = {styles.container} />
+    <Navigation/>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-      alignItems: 'center',
-      flex: 1,
-      backgroundColor: "grey",
-  }
-});
