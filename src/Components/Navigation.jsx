@@ -1,12 +1,18 @@
 import React from 'react';
-import { TouchableOpacity ,StyleSheet, Text,  View} from 'react-native';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { NavigationContainer, TabActions } from '@react-navigation/native';
+//pantallas
+import HomeScreen from '../../screens/HomeScreen';
+import StatScreen from '../../screens/StatScreen';
+import NotifScreen from '../../screens/NotifScreen';
+import ConfigScreen from '../../screens/ConfigScreen';
 
-const Navigation = () => {
-    return (
-        <View>
-          <Text>Pantalla Principal</Text>
-        </View>
-      );
+const Tab = createMaterialBottomTabNavigator();
+
+function MyTabs (){
+    return{
+        
+    };
 }
 
-export default Navigation
+export default MyTabs;
