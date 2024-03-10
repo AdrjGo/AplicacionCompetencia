@@ -44,7 +44,7 @@ function MyTabs(){
 
 export default function Navigation(){
     return(
-        <NavigationContainer>
+        <NavigationContainer style = {styles.container}>
             <MyTabs />
         </NavigationContainer>
     );
@@ -53,13 +53,5 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: "steelblue",
-    },
-    tituloprincipal:{
-      padding: 10-5,
-      fontSize: 20,
-    },
-    botonAgregar:{
-      borderRadius: 10,
-      width:"50%",
-    },
+    }
   });
