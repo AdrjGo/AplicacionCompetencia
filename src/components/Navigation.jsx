@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer} from '@react-navigation/native';
 import { Entypo } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -13,19 +13,20 @@ import NotifScreen from '../../screens/NotifScreen';
 import ConfigScreen from '../../screens/ConfigScreen';
 
 
-const Tab = createMaterialBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 
 function MyTabs(){
     return(
         <Tab.Navigator
-        initialRouteName='Inicio' 
-        screenOptions={{tabBarColor: "black",
-
+        screenOptions={{
+            tabBarActiveTintColor: 'white',
+            tabBarStyle:{backgroundColor:'black'},
+            headerStyle:{backgroundColor:'black'},
+            headerTintColor: 'white'
         }}>
             <Tab.Screen name='Inicio' component={HomeScreen} 
             options={{
                 tabBarIcon: ({ color, size}) => (<Entypo name="home" size={24} color={color} />),
-                title: 'Inicio'
             }}/>
             <Tab.Screen name='Estadísticas' component={StatScreen} 
             options={{
@@ -44,14 +45,8 @@ function MyTabs(){
 
 export default function Navigation(){
     return(
-        <NavigationContainer style = {styles.container}>
+        <NavigationContainer>
             <MyTabs />
         </NavigationContainer>
     );
 }
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: "steelblue",
-    }
-  });
