@@ -1,11 +1,15 @@
 import React from 'react';
-import { TouchableOpacity ,StyleSheet, Text,  View} from 'react-native';
+import { SafeAreaView} from 'react-native';
+import Switcher from '../src/components/Switch';
+import SwitchP from '../src/components/SwitchPrincipal';
 
 const NotifScreen = () => {
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Text>Pantalla de Notificaciones</Text>
-        </View>
+        <SafeAreaView style={{ flex: 1, backgroundColor:"#1a1a1a"}}>
+          <SwitchP texto="notificaciones" activateText="Notificaciones activadas" />
+          <Switcher texto="limite de gasto" activateText="Importe: "/>
+          <Switcher texto="salario" activateText="Importe:"/>
+        </SafeAreaView>
       );
 }
 

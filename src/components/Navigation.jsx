@@ -1,10 +1,7 @@
 import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
-import { Entypo } from "@expo/vector-icons";
-import { MaterialIcons } from "@expo/vector-icons";
-import { Ionicons } from "@expo/vector-icons";
-import { SimpleLineIcons } from "@expo/vector-icons";
+import { Entypo, MaterialIcons, Ionicons, SimpleLineIcons } from "@expo/vector-icons";
 
 //pantallas
 import HomeScreen from "../../screens/HomeScreen";

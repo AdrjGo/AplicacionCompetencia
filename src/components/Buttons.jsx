@@ -6,14 +6,17 @@ import {
   SafeAreaView,
   TouchableOpacity,
 } from "react-native";
+import { MaterialIcons } from '@expo/vector-icons';
 
 export default function Buttons(props) {
-    const { text } = props
+    const { text, iconName } = props
 
   return (
+    
     <SafeAreaView style={styles.container}>
       <TouchableOpacity
         style={{ ...styles.touchButton, backgroundColor: "#0a0a0a" }}>
+        {iconName && <MaterialIcons name={iconName} size={24} color="white"/>}
         <Text style={styles.buttonText}>{ text }</Text>
       </TouchableOpacity>
     </SafeAreaView>
@@ -27,13 +30,16 @@ const styles = StyleSheet.create({
   touchButton: {
     width: "90%",
     alignSelf: "center",
-    paddingVertical: 10,
+    paddingVertical: 22,
     marginVertical:10,
     borderRadius: 10,
+    flexDirection:"row",
+    paddingLeft:15
   },
   buttonText: {
     color: "#f1f1f1",
     textAlign: "left",
     fontSize: 18,
+    paddingLeft:20
   },
 });

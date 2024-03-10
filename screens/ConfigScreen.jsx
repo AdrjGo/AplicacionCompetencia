@@ -1,19 +1,22 @@
 import * as React from "react";
-import { SafeAreaView, StyleSheet } from "react-native";
-import Buttons from '../src/components/Buttons'
+import { SafeAreaView, ScrollView } from "react-native";
+import Buttons from "../src/components/Buttons";
 
-const ConfigScreen = () =>  {
+const ConfigScreen = () => {
   return (
-    <SafeAreaView style={{ backgroundColor: "#1a1a1a", flex: 1 }}>
-      <Buttons text="Divisa"  />
-      <Buttons text="Contraseña"/>
-      <Buttons text="Tema de la aplicación"/>
-      <Buttons text="Modo oscuro"/>
-      <Buttons text="Copia de seguridad"/>
-      <Buttons text="Información"/>
-      <Buttons text="Dudas o sugerencias"/>
-      <Buttons text="Política de privacidad"/>
-    </SafeAreaView>
+    <ScrollView style = {{ backgroundColor: "#1a1a1a", flex:1}}>
+      <SafeAreaView style={{flex: 1 }}>
+        <Buttons text="Divisa" iconName="currency-exchange" />
+        <Buttons text="Contraseña" iconName="lock-outline" />
+        <Buttons text="Tema de la aplicación" iconName="color-lens" />
+        <Buttons text="Modo oscuro" iconName="dark-mode" />
+        <Buttons text="Copia de seguridad" iconName="cloud-upload" />
+        <Buttons text="Información" iconName="info-outline" />
+        <Buttons text="Dudas o sugerencias" iconName="comment" />
+        <Buttons text="Política de privacidad" iconName="shield" />
+
+      </SafeAreaView>
+    </ScrollView>
   );
-}
-export default ConfigScreen
+};
+export default ConfigScreen;
