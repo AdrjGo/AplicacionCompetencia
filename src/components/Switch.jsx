@@ -78,7 +78,8 @@ export default function Switcher(props) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#1a1a1a",
+    width:"90%",
+    alignSelf:"center"
   },
   viewContainer: {
     flexDirection: "row",

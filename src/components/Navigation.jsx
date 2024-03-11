@@ -1,7 +1,12 @@
 import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
-import { Entypo, MaterialIcons, Ionicons, SimpleLineIcons } from "@expo/vector-icons";
+import {
+  Entypo,
+  MaterialIcons,
+  Ionicons,
+  SimpleLineIcons,
+} from "@expo/vector-icons";
 
 //pantallas
 import HomeScreen from "../../screens/HomeScreen";
@@ -9,18 +14,24 @@ import StatScreen from "../../screens/StatScreen";
 import NotifScreen from "../../screens/NotifScreen";
 import ConfigScreen from "../../screens/ConfigScreen";
 
+
+
+/**/
+
+
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: "white",
+        tabBarActiveTintColor: "#e1b859",
         tabBarStyle: { backgroundColor: "black" },
         headerStyle: { backgroundColor: "black" },
         headerTintColor: "white",
       }}
     >
+    
       <Tab.Screen
         name="Inicio"
         component={HomeScreen}

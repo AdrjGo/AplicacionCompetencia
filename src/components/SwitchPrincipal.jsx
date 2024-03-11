@@ -29,19 +29,18 @@ export default function SwitchP(props) {
 }
 
 const styles = StyleSheet.create({
-    container: {
-      backgroundColor: "black",
-    },
     viewContainer: {
       flexDirection: "row",
       alignItems: "center",
       padding: 10,
       justifyContent: "space-between",
-      backgroundColor: "black"
+      backgroundColor: "black",
+      borderBottomEndRadius:15,
+      borderBottomStartRadius:15
     },
     text: {
       color: "#f1f1f1",
       marginRight: 10,
       fontSize: 15,
     },
-  });
+});
