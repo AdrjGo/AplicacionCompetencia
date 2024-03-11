@@ -16,7 +16,7 @@ export default function Buttons(props) {
     <SafeAreaView style={styles.container}>
       <TouchableOpacity
         style={{ ...styles.touchButton, backgroundColor: "#0a0a0a" }}>
-        {iconName && <MaterialIcons name={iconName} size={24} color="white"/>}
+        {iconName && <MaterialIcons name={iconName} size={24} color="#e1b859"/>}
         <Text style={styles.buttonText}>{ text }</Text>
       </TouchableOpacity>
     </SafeAreaView>
