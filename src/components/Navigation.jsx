@@ -1,6 +1,7 @@
 import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import {
   Entypo,
   MaterialIcons,
@@ -14,10 +15,28 @@ import StatScreen from "../../screens/StatScreen";
 import NotifScreen from "../../screens/NotifScreen";
 import ConfigScreen from "../../screens/ConfigScreen";
 
+import PlusScreen from "../../screens/PlusScreen";
+import MinusScreen from "../../screens/MinusScreen";
 
+//Top navigation
+const TopTab = createMaterialTopTabNavigator();
 
-/**/
-
+function TopTapGroup() {
+  return (
+    <TopTab.Navigator
+      screenOptions={{
+        tabBarActiveTintColor: "#fff",
+        tabBarStyle: { backgroundColor: "black" },
+        headerStyle: { backgroundColor: "black" },
+        headerTintColor: "white",
+      }}
+    >
+      <TopTab.Screen name="Resumen" component={HomeScreen} />
+      <TopTab.Screen name="Ingresos" component={PlusScreen} />
+      <TopTab.Screen name="Gastos" component={MinusScreen} />
+    </TopTab.Navigator>
+  );
+}
 
 const Tab = createBottomTabNavigator();
 
@@ -31,10 +50,9 @@ function MyTabs() {
         headerTintColor: "white",
       }}
     >
-    
       <Tab.Screen
         name="Inicio"
-        component={HomeScreen}
+        component={TopTapGroup}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Entypo name="home" size={24} color={color} />
