@@ -30,7 +30,6 @@ export default function Switcher(props) {
   const [selected, setSelected] = React.useState("");
   const [isSelectListEnabled, setSelectListEnabled] = useState(true);
 
-
   const data = [
     { key: "1", value: "Día" },
     { key: "2", value: "Mes" },
@@ -62,12 +61,12 @@ export default function Switcher(props) {
             />
           </View>
           <View style={styles.selectListContainer}>
-            <SelectList 
+            <SelectList
               setSelected={(val) => setSelected(val)}
               data={data}
               save="value"
-              boxStyles={{backgroundColor:"#f1f1f1"}}
-              dropdownStyles={{backgroundColor:"#f1f1f1"}}
+              boxStyles={{ backgroundColor: "#f1f1f1" }}
+              dropdownStyles={{ backgroundColor: "#f1f1f1" }}
             />
           </View>
         </View>
@@ -78,8 +77,8 @@ export default function Switcher(props) {
 
 const styles = StyleSheet.create({
   container: {
-    width:"90%",
-    alignSelf:"center"
+    width: "90%",
+    alignSelf: "center",
   },
   viewContainer: {
     flexDirection: "row",
@@ -97,7 +96,6 @@ const styles = StyleSheet.create({
     padding: 10,
     margin: 10,
     borderRadius: 15,
-
   },
   inputContainer: {
     flexDirection: "row",

@@ -2,6 +2,7 @@ import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
 import {
   Entypo,
   MaterialIcons,
@@ -29,6 +30,7 @@ function TopTapGroup() {
         tabBarStyle: { backgroundColor: "black" },
         headerStyle: { backgroundColor: "black" },
         headerTintColor: "white",
+        
       }}
     >
       <TopTab.Screen name="Resumen" component={HomeScreen} />
@@ -38,13 +40,14 @@ function TopTapGroup() {
   );
 }
 
+//Bottom navigation
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: "#e1b859",
+        tabBarActiveTintColor: "orange",
         tabBarStyle: { backgroundColor: "black" },
         headerStyle: { backgroundColor: "black" },
         headerTintColor: "white",
